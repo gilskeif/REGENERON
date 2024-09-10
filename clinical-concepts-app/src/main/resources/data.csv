@@ -1,0 +1,21 @@
+ConceptId,DisplayName,Description,ParentIds,ChildIds,AlternateNames
+C001,Hypertension,A condition in which the force of the blood against the artery walls is too high.,P001;P002,C002;C003,High Blood Pressure
+C002,Diabetes Mellitus,A disease that occurs when your blood glucose, also called blood sugar, is too high.,P003,C004;C005,Diabetes
+C003,Asthma,A condition in which your airways narrow and swell and may produce extra mucus.,P004,C006,Bronchial Asthma
+C004,Chronic Kidney Disease,A condition characterized by a gradual loss of kidney function over time.,P002,C005;C006,CKD
+C005,COPD,A chronic inflammatory lung disease that causes obstructed airflow from the lungs.,P004,C007,Chronic Obstructive Pulmonary Disease
+C006,Coronary Artery Disease,Damage or disease in the heart's major blood vessels.,P005,,CAD
+C007,Heart Failure,A condition in which the heart doesn't pump blood as well as it should.,P005,,Congestive Heart Failure
+C008,Stroke,A medical condition in which poor blood flow to the brain results in cell death.,P006,,Brain Attack
+C009,Obesity,A complex disease involving an excessive amount of body fat.,P007,C010;C011,Overweight
+C010,Osteoarthritis,A type of arthritis that occurs when flexible tissue at the ends of bones wears down.,P008,C012;C013,Degenerative Joint Disease
+C011,Alzheimer's Disease,A progressive disease that destroys memory and other important mental functions.,P009,C014,Dementia
+C012,Parkinson's Disease,A disorder of the central nervous system that affects movement, often including tremors.,P010,C015,,Parkinsonism
+C013,Liver Cirrhosis,Chronic liver damage leading to scarring and liver failure.,P011,,Cirrhosis
+C014,Pancreatitis,Inflammation of the pancreas.,P012,,Inflamed Pancreas
+C015,Gastritis,Inflammation of the stomach lining.,P013,,Stomach Inflammation
+C016,Peptic Ulcer Disease,Sores that develop on the lining of the stomach, small intestine, or esophagus.,P013,,Ulcer
+C017,Anemia,A condition in which you lack enough healthy red blood cells to carry adequate oxygen to your body's tissues.,P014,,Iron Deficiency
+C018,Hyperthyroidism,The overproduction of a hormone by the thyroid gland.,P015,,Thyrotoxicosis
+C019,Hypothyroidism,A condition in which the thyroid gland doesn't produce enough thyroid hormone.,P016,,Underactive Thyroid
+C020,Migraine,A headache of varying intensity, often accompanied by nausea and sensitivity to light and sound.,P017,,Headache Disorder

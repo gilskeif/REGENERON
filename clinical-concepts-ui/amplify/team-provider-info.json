@@ -1,0 +1,38 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-clinicalconceptsui-dev-566ff-authRole",
+      "UnauthRoleArn": "arn:aws:iam::061051247669:role/amplify-clinicalconceptsui-dev-566ff-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::061051247669:role/amplify-clinicalconceptsui-dev-566ff-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-clinicalconceptsui-dev-566ff-deployment",
+      "UnauthRoleName": "amplify-clinicalconceptsui-dev-566ff-unauthRole",
+      "StackName": "amplify-clinicalconceptsui-dev-566ff",
+      "StackId": "arn:aws:cloudformation:us-east-1:061051247669:stack/amplify-clinicalconceptsui-dev-566ff/42401500-6e36-11ef-ae67-0afff2eeb7e3",
+      "AmplifyAppId": "d22bud899xgew3"
+    },
+    "categories": {
+      "auth": {
+        "clinicalconceptsuice025fe5": {}
+      }
+    }
+  },
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-clinicalconceptsui-prod-31fc5-authRole",
+      "UnauthRoleArn": "arn:aws:iam::061051247669:role/amplify-clinicalconceptsui-prod-31fc5-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::061051247669:role/amplify-clinicalconceptsui-prod-31fc5-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-clinicalconceptsui-prod-31fc5-deployment",
+      "UnauthRoleName": "amplify-clinicalconceptsui-prod-31fc5-unauthRole",
+      "StackName": "amplify-clinicalconceptsui-prod-31fc5",
+      "StackId": "arn:aws:cloudformation:us-east-1:061051247669:stack/amplify-clinicalconceptsui-prod-31fc5/29019c10-6e38-11ef-a42c-0ea151c2cfe3",
+      "AmplifyAppId": "d22bud899xgew3"
+    },
+    "categories": {
+      "auth": {
+        "clinicalconceptsuidd65d961": {}
+      }
+    }
+  }
+}

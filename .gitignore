@@ -1,0 +1,15 @@
+# Java
+*.class
+*.log
+target/
+.idea/
+*.iml
+bin/
+
+# JavaScript
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+dist/
+
