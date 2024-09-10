@@ -13,3 +13,11 @@ yarn-debug.log
 yarn-error.log
 dist/
 
+# Ignore ZIP files
+*.zip
+
+# Ignore node_modules directory
+node_modules/
+
+# Ignore CSV files (optional if you don't want to track CSV files)
+*.csv
