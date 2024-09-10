@@ -94,10 +94,12 @@ function App() {
         concept.alternateNames.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-    // Sorts filtered concepts by ID if toggle is on
-    const sortedConcepts = sortById
-        ? [...filteredConcepts].sort((a, b) => a.conceptId.localeCompare(b.conceptId))
-        : filteredConcepts;
+    // Sorts filtered concepts by ID based on toggle state
+    const sortedConcepts = [...filteredConcepts].sort((a, b) => {
+        return sortById
+            ? a.conceptId.localeCompare(b.conceptId)  // Ascending order
+            : b.conceptId.localeCompare(a.conceptId); // Descending order
+    });
 
     if (loading) {
         return <div>Loading...</div>;
@@ -125,7 +127,7 @@ function App() {
                     style={styles.searchBar}
                 />
                 <button onClick={toggleSortById} style={styles.sortButton}>
-                    Sort by ID {sortById ? "(Descending)" : "(Ascending)"}
+                    Sort by ID {sortById ? "(Ascending)" : "(Descending)"}
                 </button>
             </div>
 
@@ -179,6 +181,7 @@ function App() {
                     {sortedConcepts.length > 0 ? (
                         sortedConcepts.map(concept => (
                             <li key={concept.conceptId} style={styles.listItem}>
+                                <h3>{concept.conceptId}</h3>  {/* Added Concept ID */}
                                 <h2>{concept.displayName}</h2>
                                 <p>{concept.description}</p>
                                 <p>Alternate Names: {concept.alternateNames}</p>
