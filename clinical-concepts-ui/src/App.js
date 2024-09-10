@@ -6,6 +6,7 @@ function App() {
     const [concepts, setConcepts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [newConcept, setNewConcept] = useState({ conceptId: "", displayName: "", description: "", alternateNames: "" });
+    const [editConceptId, setEditConceptId] = useState(null);  // To track which concept is being edited
     const [searchTerm, setSearchTerm] = useState("");
     const [sortById, setSortById] = useState(false);  // Toggle for sorting concepts by ID
 
@@ -32,16 +33,52 @@ function App() {
         setSearchTerm(e.target.value);
     };
 
-    // Handles input for the "Add New Concept" box
+    // Handles input for the form (used for both adding and editing)
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setNewConcept(prevState => ({ ...prevState, [name]: value }));
     };
 
-    // Function to add a new concept (non-functional for now)
+    // Function to add a new concept
     const handleAddConcept = () => {
-        // Placeholder: The add functionality is not yet implemented
-        console.log("Add new concept functionality will be implemented here.");
+        axios.post("https://8bv8slbpni.execute-api.us-east-2.amazonaws.com/prod/concepts", newConcept)
+            .then(() => {
+                fetchConcepts();  // Refresh the list of concepts after adding
+                setNewConcept({ conceptId: "", displayName: "", description: "", alternateNames: "" });  // Clear input fields
+            })
+            .catch(error => {
+                console.error("Error adding concept: ", error);
+            });
+    };
+
+    // Function to edit a concept (save changes)
+    const handleSaveConcept = () => {
+        axios.put(`https://8bv8slbpni.execute-api.us-east-2.amazonaws.com/prod/concepts?conceptId=${editConceptId}`, newConcept)
+            .then(() => {
+                fetchConcepts();  // Refresh the list of concepts after editing
+                setEditConceptId(null);  // Clear edit mode
+                setNewConcept({ conceptId: "", displayName: "", description: "", alternateNames: "" });  // Clear input fields
+            })
+            .catch(error => {
+                console.error("Error saving concept: ", error);
+            });
+    };
+
+    // Function to delete a concept by its ID
+    const handleDeleteConcept = (conceptId) => {
+        axios.delete(`https://8bv8slbpni.execute-api.us-east-2.amazonaws.com/prod/concepts?conceptId=${conceptId}`)
+            .then(() => {
+                fetchConcepts();  // Refresh the list of concepts after deletion
+            })
+            .catch(error => {
+                console.error("Error deleting concept: ", error);
+            });
+    };
+
+    // Function to populate form fields when editing
+    const handleEditConcept = (concept) => {
+        setNewConcept(concept);
+        setEditConceptId(concept.conceptId);
     };
 
     // Toggle sorting by concept ID
@@ -78,7 +115,7 @@ function App() {
                 <h2 style={styles.subtitle}>Clinical Concepts Dataset</h2>
             </div>
 
-            {/* Search, Sort, and Admin Button section */}
+            {/* Search, Sort, and Add/Edit Concept section */}
             <div style={styles.controls}>
                 <input
                     type="text"
@@ -90,12 +127,11 @@ function App() {
                 <button onClick={toggleSortById} style={styles.sortButton}>
                     Sort by ID {sortById ? "(Descending)" : "(Ascending)"}
                 </button>
-                <UploadCSV /> {/* Admin button for uploading CSV */}
             </div>
 
-            {/* Add New Concept section */}
+            {/* Add/Edit Concept section */}
             <div style={styles.formContainer}>
-                <h2>Add New Concept</h2>
+                <h2>{editConceptId ? "Edit Concept" : "Add New Concept"}</h2>
                 <input
                     type="text"
                     name="conceptId"
@@ -103,6 +139,7 @@ function App() {
                     value={newConcept.conceptId}
                     onChange={handleInputChange}
                     style={styles.inputField}
+                    disabled={!!editConceptId}  // Disable conceptId input during editing
                 />
                 <input
                     type="text"
@@ -128,7 +165,12 @@ function App() {
                     onChange={handleInputChange}
                     style={styles.inputField}
                 />
-                <button onClick={handleAddConcept} style={styles.addButton}>Add Concept</button>
+                <button onClick={editConceptId ? handleSaveConcept : handleAddConcept} style={styles.addButton}>
+                    {editConceptId ? "Save Changes" : "Add Concept"}
+                </button>
+
+                {/* Import CSV button moved under Add New Concept */}
+                <UploadCSV />
             </div>
 
             {/* Concept list section */}
@@ -140,6 +182,12 @@ function App() {
                                 <h2>{concept.displayName}</h2>
                                 <p>{concept.description}</p>
                                 <p>Alternate Names: {concept.alternateNames}</p>
+                                <button onClick={() => handleEditConcept(concept)} style={styles.editButton}>
+                                    Edit
+                                </button>
+                                <button onClick={() => handleDeleteConcept(concept.conceptId)} style={styles.deleteButton}>
+                                    Delete
+                                </button>
                             </li>
                         ))
                     ) : (
@@ -151,7 +199,7 @@ function App() {
     );
 }
 
-// Style object for the UI elements
+// Style object for the UI elements with updated gradient background and larger search bar
 const styles = {
     container: {
         display: 'flex',
@@ -159,7 +207,7 @@ const styles = {
         alignItems: 'center',
         padding: '20px',
         fontFamily: 'Arial, sans-serif',
-        backgroundColor: '#f0f4f8',  // Soft blue-gray background
+        backgroundImage: 'linear-gradient(to bottom, #86b7e3, #f0f4f8)',  // Lighter blue gradient background
         color: '#333',
         height: '100vh',
     },
@@ -184,12 +232,12 @@ const styles = {
         margin: 0,
     },
     title: {
-        color: '#003366',  // Dark blue for main title
+        color: '#003366',  // Keep title colors unchanged
         fontSize: '36px',
         fontWeight: 'bold',
     },
     subtitle: {
-        color: '#666',  // Muted gray for subtitle
+        color: '#666',  // Keep subtitle colors unchanged
         fontSize: '18px',
     },
     controls: {
@@ -203,7 +251,7 @@ const styles = {
         fontSize: '16px',
         borderRadius: '5px',
         border: '1px solid #ccc',
-        flex: '1',
+        flex: '3',  // Increase the width of the search bar
         marginRight: '10px',
     },
     sortButton: {
@@ -213,7 +261,6 @@ const styles = {
         borderRadius: '5px',
         cursor: 'pointer',
         border: 'none',
-        marginRight: '10px',
     },
     formContainer: {
         marginTop: '20px',
@@ -235,6 +282,7 @@ const styles = {
         border: 'none',
         borderRadius: '5px',
         cursor: 'pointer',
+        marginBottom: '20px',  // Add some space before the CSV button
     },
     recordsSection: {
         width: '80%',
@@ -251,6 +299,23 @@ const styles = {
         borderRadius: '5px',
         boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
     },
+    editButton: {
+        backgroundColor: '#4CAF50',
+        color: '#fff',
+        border: 'none',
+        padding: '10px',
+        borderRadius: '5px',
+        cursor: 'pointer',
+        marginRight: '10px',
+    },
+    deleteButton: {
+        backgroundColor: '#f44336',
+        color: '#fff',
+        border: 'none',
+        padding: '10px',
+        borderRadius: '5px',
+        cursor: 'pointer',
+    }
 };
 
 export default App;
