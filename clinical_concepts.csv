@@ -1,22 +1,101 @@
-conceptId,AlternateNames,Description,DisplayName
-C001,High Blood Pressure,A condition in which the force of the blood against the artery walls is too high.,Hypertension
-C001,High Blood Pressure,A condition in which the force of the blood against the artery walls is too high.,Hypertension
-C002,Diabetes,"A disease that occurs when your blood glucose, also called blood sugar, is too high.",Diabetes Mellitus
-C003,Bronchial Asthma,A condition in which your airways narrow and swell and may produce extra mucus.,Asthma
-C004,CKD,A condition characterized by a gradual loss of kidney function over time.,Chronic Kidney Disease
-C005,Chronic Obstructive Pulmonary Disease,A chronic inflammatory lung disease that causes obstructed airflow from the lungs.,COPD
-C006,CAD,Damage or disease in the heart's major blood vessels.,Coronary Artery Disease
-C007,Congestive Heart Failure,A condition in which the heart doesn't pump blood as well as it should.,Heart Failure
-C008,Brain Attack,A medical condition in which poor blood flow to the brain results in cell death.,Stroke
-C009,Overweight,A complex disease involving an excessive amount of body fat.,Obesity
-C010,Degenerative Joint Disease,A type of arthritis that occurs when flexible tissue at the ends of bones wears down.,Osteoarthritis
-C011,Dementia,A progressive disease that destroys memory and other important mental functions.,Alzheimer's Disease
-C012,Parkinsonism,"A disorder of the central nervous system that affects movement, often including tremors.",Parkinson's Disease
-C013,Cirrhosis,Chronic liver damage leading to scarring and liver failure.,Liver Cirrhosis
-C014,Inflamed Pancreas,Inflammation of the pancreas.,Pancreatitis
-C015,Stomach Inflammation,Inflammation of the stomach lining.,Gastritis
-C016,Ulcer,"Sores that develop on the lining of the stomach, small intestine, or esophagus.",Peptic Ulcer Disease
-C017,Iron Deficiency,A condition in which you lack enough healthy red blood cells to carry adequate oxygen to your body’s tissues.,Anemia
-C018,Thyrotoxicosis,The overproduction of a hormone by the thyroid gland.,Hyperthyroidism
-C019,Underactive Thyroid,A condition in which the thyroid gland doesn't produce enough thyroid hormone.,Hypothyroidism
-C020,Headache Disorder,"A headache of varying intensity, often accompanied by nausea and sensitivity to light and sound.",Migraine
+conceptId,displayName,description,alternateNames
+C001,Diabetes Mellitus,"A group of diseases that result in too much sugar in the blood, or high blood glucose.",Diabetes Mellitus
+C002,Hypertension,"A condition in which the force of the blood against the artery walls is too high, leading to health problems.",High Blood Pressure
+C003,Asthma,"A respiratory condition marked by spasms in the bronchi of the lungs, causing difficulty in breathing.",Respiratory Condition
+C004,Chronic Obstructive Pulmonary Disease (COPD),A chronic inflammatory lung disease that causes obstructed airflow from the lungs.,COPD
+C005,Osteoporosis,"A condition in which bones become weak and brittle, increasing the risk of fractures.",Bone Loss
+C006,Alzheimer's Disease,A progressive disease that destroys memory and other important mental functions.,Dementia
+C007,Rheumatoid Arthritis,"A chronic inflammatory disorder affecting many joints, including those in the hands and feet.",RA
+C008,Parkinson's Disease,A progressive nervous system disorder that affects movement and causes tremors.,Parkinsonism
+C009,Epilepsy,"A disorder in which nerve cell activity in the brain is disturbed, causing seizures.",Seizure Disorder
+C010,Pneumonia,"An infection that inflames the air sacs in one or both lungs, which may fill with fluid.",Lung Infection
+C011,Chronic Kidney Disease,"The gradual loss of kidney function, leading to waste buildup in the body.",CKD
+C012,Hepatitis B,A serious liver infection caused by the hepatitis B virus that can become chronic.,HBV
+C013,Psoriasis,"A skin disease marked by red, itchy, scaly patches, most commonly on the knees, elbows, and scalp.",Skin Disorder
+C014,Coronary Artery Disease,"A disease of the arteries that supply blood to the heart, leading to chest pain and heart attacks.",Heart Disease
+C015,Irritable Bowel Syndrome (IBS),"A gastrointestinal disorder that causes abdominal pain, bloating, and changes in bowel habits.",IBS
+C016,Multiple Sclerosis,"A disease in which the immune system eats away at the protective covering of nerves, disrupting communication between the brain and body.",MS
+C017,Gout,"A form of arthritis characterized by severe pain, redness, and tenderness in joints.",Uric Acid Arthritis
+C018,Crohn's Disease,A chronic inflammatory bowel disease that affects the lining of the digestive tract.,Inflammatory Bowel Disease
+C019,Hepatitis C,"A viral infection that causes liver inflammation, sometimes leading to serious liver damage.",HCV
+C020,Hyperthyroidism,"A condition in which the thyroid gland produces too much of the hormone thyroxine, accelerating the body's metabolism.",Overactive Thyroid
+C021,Diabetes Mellitus Variant 21,"A group of diseases that result in too much sugar in the blood, or high blood glucose. This variant provides additional insights for concept 21.",Diabetes Mellitus Type 21
+C022,Hypertension Variant 22,"A condition in which the force of the blood against the artery walls is too high, leading to health problems. This variant provides additional insights for concept 22.",High Blood Pressure Type 22
+C023,Asthma Variant 23,"A respiratory condition marked by spasms in the bronchi of the lungs, causing difficulty in breathing. This variant provides additional insights for concept 23.",Respiratory Condition Type 23
+C024,Chronic Obstructive Pulmonary Disease (COPD) Variant 24,A chronic inflammatory lung disease that causes obstructed airflow from the lungs. This variant provides additional insights for concept 24.,COPD Type 24
+C025,Osteoporosis Variant 25,"A condition in which bones become weak and brittle, increasing the risk of fractures. This variant provides additional insights for concept 25.",Bone Loss Type 25
+C026,Alzheimer's Disease Variant 26,A progressive disease that destroys memory and other important mental functions. This variant provides additional insights for concept 26.,Dementia Type 26
+C027,Rheumatoid Arthritis Variant 27,"A chronic inflammatory disorder affecting many joints, including those in the hands and feet. This variant provides additional insights for concept 27.",RA Type 27
+C028,Parkinson's Disease Variant 28,A progressive nervous system disorder that affects movement and causes tremors. This variant provides additional insights for concept 28.,Parkinsonism Type 28
+C029,Epilepsy Variant 29,"A disorder in which nerve cell activity in the brain is disturbed, causing seizures. This variant provides additional insights for concept 29.",Seizure Disorder Type 29
+C030,Pneumonia Variant 30,"An infection that inflames the air sacs in one or both lungs, which may fill with fluid. This variant provides additional insights for concept 30.",Lung Infection Type 30
+C031,Chronic Kidney Disease Variant 31,"The gradual loss of kidney function, leading to waste buildup in the body. This variant provides additional insights for concept 31.",CKD Type 31
+C032,Hepatitis B Variant 32,A serious liver infection caused by the hepatitis B virus that can become chronic. This variant provides additional insights for concept 32.,HBV Type 32
+C033,Psoriasis Variant 33,"A skin disease marked by red, itchy, scaly patches, most commonly on the knees, elbows, and scalp. This variant provides additional insights for concept 33.",Skin Disorder Type 33
+C034,Coronary Artery Disease Variant 34,"A disease of the arteries that supply blood to the heart, leading to chest pain and heart attacks. This variant provides additional insights for concept 34.",Heart Disease Type 34
+C035,Irritable Bowel Syndrome (IBS) Variant 35,"A gastrointestinal disorder that causes abdominal pain, bloating, and changes in bowel habits. This variant provides additional insights for concept 35.",IBS Type 35
+C036,Multiple Sclerosis Variant 36,"A disease in which the immune system eats away at the protective covering of nerves, disrupting communication between the brain and body. This variant provides additional insights for concept 36.",MS Type 36
+C037,Gout Variant 37,"A form of arthritis characterized by severe pain, redness, and tenderness in joints. This variant provides additional insights for concept 37.",Uric Acid Arthritis Type 37
+C038,Crohn's Disease Variant 38,A chronic inflammatory bowel disease that affects the lining of the digestive tract. This variant provides additional insights for concept 38.,Inflammatory Bowel Disease Type 38
+C039,Hepatitis C Variant 39,"A viral infection that causes liver inflammation, sometimes leading to serious liver damage. This variant provides additional insights for concept 39.",HCV Type 39
+C040,Hyperthyroidism Variant 40,"A condition in which the thyroid gland produces too much of the hormone thyroxine, accelerating the body's metabolism. This variant provides additional insights for concept 40.",Overactive Thyroid Type 40
+C041,Diabetes Mellitus Variant 41,"A group of diseases that result in too much sugar in the blood, or high blood glucose. This variant provides additional insights for concept 41.",Diabetes Mellitus Type 41
+C042,Hypertension Variant 42,"A condition in which the force of the blood against the artery walls is too high, leading to health problems. This variant provides additional insights for concept 42.",High Blood Pressure Type 42
+C043,Asthma Variant 43,"A respiratory condition marked by spasms in the bronchi of the lungs, causing difficulty in breathing. This variant provides additional insights for concept 43.",Respiratory Condition Type 43
+C044,Chronic Obstructive Pulmonary Disease (COPD) Variant 44,A chronic inflammatory lung disease that causes obstructed airflow from the lungs. This variant provides additional insights for concept 44.,COPD Type 44
+C045,Osteoporosis Variant 45,"A condition in which bones become weak and brittle, increasing the risk of fractures. This variant provides additional insights for concept 45.",Bone Loss Type 45
+C046,Alzheimer's Disease Variant 46,A progressive disease that destroys memory and other important mental functions. This variant provides additional insights for concept 46.,Dementia Type 46
+C047,Rheumatoid Arthritis Variant 47,"A chronic inflammatory disorder affecting many joints, including those in the hands and feet. This variant provides additional insights for concept 47.",RA Type 47
+C048,Parkinson's Disease Variant 48,A progressive nervous system disorder that affects movement and causes tremors. This variant provides additional insights for concept 48.,Parkinsonism Type 48
+C049,Epilepsy Variant 49,"A disorder in which nerve cell activity in the brain is disturbed, causing seizures. This variant provides additional insights for concept 49.",Seizure Disorder Type 49
+C050,Pneumonia Variant 50,"An infection that inflames the air sacs in one or both lungs, which may fill with fluid. This variant provides additional insights for concept 50.",Lung Infection Type 50
+C051,Chronic Kidney Disease Variant 51,"The gradual loss of kidney function, leading to waste buildup in the body. This variant provides additional insights for concept 51.",CKD Type 51
+C052,Hepatitis B Variant 52,A serious liver infection caused by the hepatitis B virus that can become chronic. This variant provides additional insights for concept 52.,HBV Type 52
+C053,Psoriasis Variant 53,"A skin disease marked by red, itchy, scaly patches, most commonly on the knees, elbows, and scalp. This variant provides additional insights for concept 53.",Skin Disorder Type 53
+C054,Coronary Artery Disease Variant 54,"A disease of the arteries that supply blood to the heart, leading to chest pain and heart attacks. This variant provides additional insights for concept 54.",Heart Disease Type 54
+C055,Irritable Bowel Syndrome (IBS) Variant 55,"A gastrointestinal disorder that causes abdominal pain, bloating, and changes in bowel habits. This variant provides additional insights for concept 55.",IBS Type 55
+C056,Multiple Sclerosis Variant 56,"A disease in which the immune system eats away at the protective covering of nerves, disrupting communication between the brain and body. This variant provides additional insights for concept 56.",MS Type 56
+C057,Gout Variant 57,"A form of arthritis characterized by severe pain, redness, and tenderness in joints. This variant provides additional insights for concept 57.",Uric Acid Arthritis Type 57
+C058,Crohn's Disease Variant 58,A chronic inflammatory bowel disease that affects the lining of the digestive tract. This variant provides additional insights for concept 58.,Inflammatory Bowel Disease Type 58
+C059,Hepatitis C Variant 59,"A viral infection that causes liver inflammation, sometimes leading to serious liver damage. This variant provides additional insights for concept 59.",HCV Type 59
+C060,Hyperthyroidism Variant 60,"A condition in which the thyroid gland produces too much of the hormone thyroxine, accelerating the body's metabolism. This variant provides additional insights for concept 60.",Overactive Thyroid Type 60
+C061,Diabetes Mellitus Variant 61,"A group of diseases that result in too much sugar in the blood, or high blood glucose. This variant provides additional insights for concept 61.",Diabetes Mellitus Type 61
+C062,Hypertension Variant 62,"A condition in which the force of the blood against the artery walls is too high, leading to health problems. This variant provides additional insights for concept 62.",High Blood Pressure Type 62
+C063,Asthma Variant 63,"A respiratory condition marked by spasms in the bronchi of the lungs, causing difficulty in breathing. This variant provides additional insights for concept 63.",Respiratory Condition Type 63
+C064,Chronic Obstructive Pulmonary Disease (COPD) Variant 64,A chronic inflammatory lung disease that causes obstructed airflow from the lungs. This variant provides additional insights for concept 64.,COPD Type 64
+C065,Osteoporosis Variant 65,"A condition in which bones become weak and brittle, increasing the risk of fractures. This variant provides additional insights for concept 65.",Bone Loss Type 65
+C066,Alzheimer's Disease Variant 66,A progressive disease that destroys memory and other important mental functions. This variant provides additional insights for concept 66.,Dementia Type 66
+C067,Rheumatoid Arthritis Variant 67,"A chronic inflammatory disorder affecting many joints, including those in the hands and feet. This variant provides additional insights for concept 67.",RA Type 67
+C068,Parkinson's Disease Variant 68,A progressive nervous system disorder that affects movement and causes tremors. This variant provides additional insights for concept 68.,Parkinsonism Type 68
+C069,Epilepsy Variant 69,"A disorder in which nerve cell activity in the brain is disturbed, causing seizures. This variant provides additional insights for concept 69.",Seizure Disorder Type 69
+C070,Pneumonia Variant 70,"An infection that inflames the air sacs in one or both lungs, which may fill with fluid. This variant provides additional insights for concept 70.",Lung Infection Type 70
+C071,Chronic Kidney Disease Variant 71,"The gradual loss of kidney function, leading to waste buildup in the body. This variant provides additional insights for concept 71.",CKD Type 71
+C072,Hepatitis B Variant 72,A serious liver infection caused by the hepatitis B virus that can become chronic. This variant provides additional insights for concept 72.,HBV Type 72
+C073,Psoriasis Variant 73,"A skin disease marked by red, itchy, scaly patches, most commonly on the knees, elbows, and scalp. This variant provides additional insights for concept 73.",Skin Disorder Type 73
+C074,Coronary Artery Disease Variant 74,"A disease of the arteries that supply blood to the heart, leading to chest pain and heart attacks. This variant provides additional insights for concept 74.",Heart Disease Type 74
+C075,Irritable Bowel Syndrome (IBS) Variant 75,"A gastrointestinal disorder that causes abdominal pain, bloating, and changes in bowel habits. This variant provides additional insights for concept 75.",IBS Type 75
+C076,Multiple Sclerosis Variant 76,"A disease in which the immune system eats away at the protective covering of nerves, disrupting communication between the brain and body. This variant provides additional insights for concept 76.",MS Type 76
+C077,Gout Variant 77,"A form of arthritis characterized by severe pain, redness, and tenderness in joints. This variant provides additional insights for concept 77.",Uric Acid Arthritis Type 77
+C078,Crohn's Disease Variant 78,A chronic inflammatory bowel disease that affects the lining of the digestive tract. This variant provides additional insights for concept 78.,Inflammatory Bowel Disease Type 78
+C079,Hepatitis C Variant 79,"A viral infection that causes liver inflammation, sometimes leading to serious liver damage. This variant provides additional insights for concept 79.",HCV Type 79
+C080,Hyperthyroidism Variant 80,"A condition in which the thyroid gland produces too much of the hormone thyroxine, accelerating the body's metabolism. This variant provides additional insights for concept 80.",Overactive Thyroid Type 80
+C081,Diabetes Mellitus Variant 81,"A group of diseases that result in too much sugar in the blood, or high blood glucose. This variant provides additional insights for concept 81.",Diabetes Mellitus Type 81
+C082,Hypertension Variant 82,"A condition in which the force of the blood against the artery walls is too high, leading to health problems. This variant provides additional insights for concept 82.",High Blood Pressure Type 82
+C083,Asthma Variant 83,"A respiratory condition marked by spasms in the bronchi of the lungs, causing difficulty in breathing. This variant provides additional insights for concept 83.",Respiratory Condition Type 83
+C084,Chronic Obstructive Pulmonary Disease (COPD) Variant 84,A chronic inflammatory lung disease that causes obstructed airflow from the lungs. This variant provides additional insights for concept 84.,COPD Type 84
+C085,Osteoporosis Variant 85,"A condition in which bones become weak and brittle, increasing the risk of fractures. This variant provides additional insights for concept 85.",Bone Loss Type 85
+C086,Alzheimer's Disease Variant 86,A progressive disease that destroys memory and other important mental functions. This variant provides additional insights for concept 86.,Dementia Type 86
+C087,Rheumatoid Arthritis Variant 87,"A chronic inflammatory disorder affecting many joints, including those in the hands and feet. This variant provides additional insights for concept 87.",RA Type 87
+C088,Parkinson's Disease Variant 88,A progressive nervous system disorder that affects movement and causes tremors. This variant provides additional insights for concept 88.,Parkinsonism Type 88
+C089,Epilepsy Variant 89,"A disorder in which nerve cell activity in the brain is disturbed, causing seizures. This variant provides additional insights for concept 89.",Seizure Disorder Type 89
+C090,Pneumonia Variant 90,"An infection that inflames the air sacs in one or both lungs, which may fill with fluid. This variant provides additional insights for concept 90.",Lung Infection Type 90
+C091,Chronic Kidney Disease Variant 91,"The gradual loss of kidney function, leading to waste buildup in the body. This variant provides additional insights for concept 91.",CKD Type 91
+C092,Hepatitis B Variant 92,A serious liver infection caused by the hepatitis B virus that can become chronic. This variant provides additional insights for concept 92.,HBV Type 92
+C093,Psoriasis Variant 93,"A skin disease marked by red, itchy, scaly patches, most commonly on the knees, elbows, and scalp. This variant provides additional insights for concept 93.",Skin Disorder Type 93
+C094,Coronary Artery Disease Variant 94,"A disease of the arteries that supply blood to the heart, leading to chest pain and heart attacks. This variant provides additional insights for concept 94.",Heart Disease Type 94
+C095,Irritable Bowel Syndrome (IBS) Variant 95,"A gastrointestinal disorder that causes abdominal pain, bloating, and changes in bowel habits. This variant provides additional insights for concept 95.",IBS Type 95
+C096,Multiple Sclerosis Variant 96,"A disease in which the immune system eats away at the protective covering of nerves, disrupting communication between the brain and body. This variant provides additional insights for concept 96.",MS Type 96
+C097,Gout Variant 97,"A form of arthritis characterized by severe pain, redness, and tenderness in joints. This variant provides additional insights for concept 97.",Uric Acid Arthritis Type 97
+C098,Crohn's Disease Variant 98,A chronic inflammatory bowel disease that affects the lining of the digestive tract. This variant provides additional insights for concept 98.,Inflammatory Bowel Disease Type 98
+C099,Hepatitis C Variant 99,"A viral infection that causes liver inflammation, sometimes leading to serious liver damage. This variant provides additional insights for concept 99.",HCV Type 99
+C100,Hyperthyroidism Variant 100,"A condition in which the thyroid gland produces too much of the hormone thyroxine, accelerating the body's metabolism. This variant provides additional insights for concept 100.",Overactive Thyroid Type 100
